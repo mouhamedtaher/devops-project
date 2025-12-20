@@ -1,4 +1,4 @@
-# devops-project# 🚀 DevOps Project: Task Manager API
+# 🚀 DevOps Project: Task Manager API
 
 Ce projet est une démonstration complète d'une chaîne **DevOps** moderne.
 Il s'agit d'une API REST (Python/Flask) conteneurisée, automatisée et monitorée.
