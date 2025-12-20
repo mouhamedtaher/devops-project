@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  # 1. Votre Application Python
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app  # Permet de voir les modifs de code en direct (optionnel mais pratique)
+
+  # 2. Prometheus (Le collecteur)
+  prometheus:
+    image: prom/prometheus
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - "9090:9090"
+
+  # 3. Grafana (Le visualiseur)
+  grafana:
+    image: grafana/grafana
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin  # Mot de passe par défaut
