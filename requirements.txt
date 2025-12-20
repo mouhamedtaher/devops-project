@@ -1,2 +1,4 @@
 flask==3.0.0
 prometheus-flask-exporter==0.23.0
+pytest
+prometheus-client
