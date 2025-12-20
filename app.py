@@ -23,7 +23,8 @@ tasks = [
 @app.route('/')
 def home():
     logger.info("Accès à la racine")
-    return jsonify({"message": "DevOps Project API is running!", "version": "1.0.0"})
+    # On change le message et la version pour prouver que la mise à jour fonctionne
+    return jsonify({"message": "🚀 VALIDATION FINALE - TOUT EST VERT ! 🚀", "version": "2.0.0"})
 
 @app.route('/health')
 def health():
