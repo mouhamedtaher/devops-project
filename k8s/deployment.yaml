@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment          # <--- Type de ressource : Un Déploiement
+metadata:
+  name: devops-project-deployment
+spec:
+  replicas: 1             # <--- On veut 1 seul clone de l'application
+  selector:
+    matchLabels:
+      app: devops-project # <--- Ce déploiement gère les pods étiquetés "devops-project"
+  template:
+    metadata:
+      labels:
+        app: devops-project
+    spec:
+      containers:
+      - name: devops-project-container
+        # 👇👇👇 ATTENTION : METTEZ VOTRE PSEUDO DOCKER HUB ICI 👇👇👇
+        image: mouhamed1234/devops-project:latest 
+        ports:
+        - containerPort: 5000 # <--- Le port interne de Flask
+        imagePullPolicy: Always # <--- Force à retélécharger l'image si elle change

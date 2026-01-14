@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service             # <--- Type de ressource : Un Service (Réseau)
+metadata:
+  name: devops-project-service
+spec:
+  type: NodePort          # <--- Ouvre un accès vers l'extérieur
+  selector:
+    app: devops-project   # <--- Redirige le trafic vers les pods "devops-project"
+  ports:
+    - protocol: TCP
+      port: 80            # <--- Port du service (l'entrée)
+      targetPort: 5000    # <--- Port de destination (votre app Flask)
