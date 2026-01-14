@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
       - name: devops-project-container
-        # 👇👇👇 ATTENTION : METTEZ VOTRE PSEUDO DOCKER HUB ICI 👇👇👇
-        image: mouhamed1234/devops-project:latest 
+        image: medkallel/devops-project:latest  # (votre nom d'image)
+        imagePullPolicy: Always                 # <--- AJOUTEZ CETTE LIGNE ICI
         ports:
-        - containerPort: 5000 # <--- Le port interne de Flask
+        - containerPort: 5000
         imagePullPolicy: Always # <--- Force à retélécharger l'image si elle change
