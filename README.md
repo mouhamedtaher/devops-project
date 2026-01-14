@@ -75,3 +75,4 @@ Une fois connecté à Grafana (`localhost:3000`) :
 
 ---
 *Réalisé dans le cadre d'un projet d'apprentissage DevOps.*
+### Statut : Backend implémenté et validé.
