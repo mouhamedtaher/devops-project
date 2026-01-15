@@ -53,7 +53,7 @@ def home():
     logger.info("Traitement de la page d'accueil")
     return jsonify({
         "message": "DevOps Project Final Version", 
-        "version": "2.0.0-DdEMO",
+        "version": "2.0.0-DEMO",
         "trace_id": g.request_id
     })
 
